@@ -1,0 +1,69 @@
+.card-table {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  width: 95%;
+  max-width: 1000px;
+  color: #333;
+}
+
+/* Table terang */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #333;
+}
+
+th, td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f3f3f3;
+  font-weight: 700;
+  color: #555;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+/* Button versi terang */
+button {
+  border: none;
+  padding: 10px 14px;
+  margin: 0 6px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+button.view {
+  background: #2196f3;
+  color: white;
+  box-shadow: 0 2px 6px rgba(33, 150, 243, 0.4);
+}
+
+button.update {
+  background: #ffb300;
+  color: #222;
+  box-shadow: 0 2px 6px rgba(255, 179, 0, 0.4);
+}
+
+button.delete {
+  background: #f44336;
+  color: white;
+  box-shadow: 0 2px 6px rgba(244, 67, 54, 0.4);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}

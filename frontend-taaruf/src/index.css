@@ -1,0 +1,40 @@
+/* index.css */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9; /* putih terang */
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background-color: #4caf50; /* hijau lembut */
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 0 6px;
+  box-shadow: 0 2px 5px rgba(76, 175, 80, 0.3);
+}
+
+button:hover {
+  background-color: #388e3c;
+  transform: translateY(-1px);
+}

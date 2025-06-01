@@ -1,0 +1,108 @@
+/* listPage.css */
+.page-background {
+  min-height: 100vh;
+  background: linear-gradient(100deg, #d271a2, #f8dae9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 400px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.glass-card {
+  background: #fff0f6;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
+  width: 100%;
+  max-width: 1100px;
+  text-align: center;
+  overflow-x: auto;
+}
+
+h2 {
+  color: #2d2228;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.add-btn,
+.logout-btn {
+  margin: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  background-color: #ff007f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.2);
+}
+
+.add-btn:hover,
+.logout-btn:hover {
+  background-color: #cc0066;
+  margin-left: 0px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  margin-top: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
+}
+
+th {
+  background-color: #ffdce6;
+  color: #ff007f;
+  font-weight: bold;
+}
+
+td {
+  color: #333;
+}
+
+button {
+  padding: 8px 14px;
+  margin: 4px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.view {
+  background-color: #1e88e5;
+}
+
+button.update {
+  background-color: #ffb300;
+  color: #222;
+}
+
+button.delete {
+  background-color: #e53935;
+}
+
+button.view:hover {
+  background-color: #1565c0;
+}
+
+button.update:hover {
+  background-color: #fb8c00;
+}
+
+button.delete:hover {
+  background-color: #c62828;
+}
