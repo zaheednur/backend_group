@@ -40,8 +40,12 @@ function LoginPage() {
         />
         <button type="submit">Masuk</button>
         <p className="link-text">
-          <span onClick={() => navigate('/register')}></span>
+          Belum punya akun?{' '}
+          <span className="register-link" onClick={() => navigate('/register')}>
+            Daftar
+          </span>
         </p>
+
       </form>
     </div>
   );

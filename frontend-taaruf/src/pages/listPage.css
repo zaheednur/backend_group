@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 400px;
+  padding: 100px; /* Disesuaikan agar tidak terlalu besar */
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -15,7 +15,7 @@
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
   width: 100%;
-  max-width: 1100px;
+  max-width: 1300px; /* Lebih lebar agar kolom tidak sempit */
   text-align: center;
   overflow-x: auto;
 }
@@ -43,7 +43,6 @@ h2 {
 .add-btn:hover,
 .logout-btn:hover {
   background-color: #cc0066;
-  margin-left: 0px;
 }
 
 table {
@@ -59,6 +58,10 @@ th, td {
   padding: 16px 20px;
   border-bottom: 1px solid #eee;
   font-size: 1rem;
+  text-align: left;
+  white-space: nowrap; /* Agar isi tetap satu baris */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 th {
@@ -71,19 +74,29 @@ td {
   color: #333;
 }
 
+/* Kolom aksi: gunakan flex agar tombol sejajar */
+td:nth-child(4) {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
 button {
-  padding: 8px 14px;
-  margin: 4px;
+  padding: 8px 12px;
   border: none;
   border-radius: 8px;
   font-weight: 600;
-  color: white;
+  font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  white-space: nowrap;
 }
 
 button.view {
   background-color: #1e88e5;
+  color: white;
 }
 
 button.update {
@@ -93,6 +106,7 @@ button.update {
 
 button.delete {
   background-color: #e53935;
+  color: white;
 }
 
 button.view:hover {

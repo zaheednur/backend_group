@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { authApi } from '../api';
 import { useNavigate } from 'react-router-dom';
+import './registerPage.css'; // ⬅️ Import CSS-nya
 
 function RegisterPage() {
   const [form, setForm] = useState({ username: '', email: '', password: '' });
@@ -21,12 +22,18 @@ function RegisterPage() {
   };
 
   return (
-    <div>
-      <h2>Registrasi</h2>
-      <input name="username" placeholder="Username" onChange={handleChange} />
-      <input name="email" placeholder="Email" onChange={handleChange} />
-      <input name="password" type="password" placeholder="Password" onChange={handleChange} />
-      <button onClick={handleRegister}>Register</button>
+    <div className="register-container">
+      <div className="register-card">
+        <h2>Registrasi</h2>
+        <input name="username" placeholder="Username" onChange={handleChange} />
+        <input name="email" placeholder="Email" onChange={handleChange} />
+        <input name="password" type="password" placeholder="Password" onChange={handleChange} />
+        <button onClick={handleRegister}>Register</button>
+        <div className="link-text">
+          Sudah punya akun?
+          <span onClick={() => navigate('/login')}>Login</span>
+        </div>
+      </div>
     </div>
   );
 }

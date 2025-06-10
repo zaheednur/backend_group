@@ -1,4 +1,3 @@
-// src/pages/FormPage.js
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import api from '../api'; // gunakan instance api yang sudah siap pakai token
@@ -64,13 +63,21 @@ function FormPage() {
             key !== 'id' && key !== 'created_at' ? (
               <div key={key} className="form-group">
                 <label>{key.replace('_', ' ').toUpperCase()}</label>
-                <input
-                  type={key === 'usia' ? 'number' : 'text'}
-                  name={key}
-                  value={value}
-                  onChange={handleChange}
-                  required
-                />
+                {key === 'jenis_kelamin' ? (
+                  <select name={key} value={value} onChange={handleChange} required>
+                    <option value="">-- Pilih Jenis Kelamin --</option>
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                  </select>
+                ) : (
+                  <input
+                    type={key === 'usia' ? 'number' : 'text'}
+                    name={key}
+                    value={value}
+                    onChange={handleChange}
+                    required
+                  />
+                )}
               </div>
             ) : null
           )}
